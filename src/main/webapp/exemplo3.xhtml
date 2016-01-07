@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+xmlns:f="http://xmlns.jcp.org/jsf/core"
+xmlns:h="http://xmlns.jcp.org/jsf/html">
+
+<head>
+<title>OutputFormat</title>
+</head>
+<body>
+O componente "h:outputFormat"" renderiza textos parametrizados na página. <br />
+Os textos parametrizados são compostos por espaços reservados (placeholders),<br /> que são
+substituídos por valores no momento da renderização. <br /><br />
+
+	<h:form>
+		<h:outputFormat
+			value="Oi {0}! Existem {1} tarefas pendentes.">
+			<f:param value="Karina"/>
+			<f:param value="3" />
+		</h:outputFormat>
+	</h:form>
+</body>
+</html>
