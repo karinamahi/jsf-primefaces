@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+xmlns:f="http://xmlns.jcp.org/jsf/core"
+xmlns:h="http://xmlns.jcp.org/jsf/html">
+
+<head>
+<title>Campos de Checagem e botoões de rádio</title>
+</head>
+<body>
+			
+	<b>Componente h:selectOneRadio</b> <br /><br />
+	
+	<h:selectOneRadio id="sexo">
+		<f:selectItem itemValue="M" itemLabel="Masculino" />
+		<f:selectItem itemValue="F" itemLabel="Feminino" />
+	</h:selectOneRadio>
+	
+	<br /><br /><br />
+
+	<b>Componente h:selectOneRadio</b> <br /><br />
+	
+	<h:selectOneRadio id="sexo"  layout="pageDirection">
+		<f:selectItem itemValue="M" itemLabel="Masculino" />
+		<f:selectItem itemValue="F" itemLabel="Feminino" />
+	</h:selectOneRadio>
+	
+	<br /><br /><br />
+	
+	<b>Componente h:selectBooleanCheckbox</b> <br /><br />
+	
+	<h:selectBooleanCheckbox id="aceite" value="#{cadastroUsuarioBean.termoAceito}"/>
+	<h:outputLabel value="Li e aceito os termos e condições." for="aceite" />
+	
+	<br /><br /><br />	
+	
+	<b>Componente h:selectBooleanCheckbox</b> <br /><br />
+			<h:selectManyCheckbox id="assuntos" value="#{cadastroUsuarioBean.assuntosInteresse}">
+				<f:selectItem itemValue="1" itemLabel="Java" />
+				<f:selectItem itemValue="1" itemLabel="Phyton" />
+				<f:selectItem itemValue="1" itemLabel="Ruby" />
+				<f:selectItem itemValue="1" itemLabel="PHP" />
+				<f:selectItem itemValue="1" itemLabel="JSF" />
+				<f:selectItem itemValue="1" itemLabel="CSS" />			
+			</h:selectManyCheckbox>
+			
+	<br /><br /><br />
+	
+	<b>Componente h:selectBooleanCheckbox</b> <br /><br />
+			<h:selectManyCheckbox id="assuntos" value="#{cadastroUsuarioBean.assuntosInteresse}" layout="pageDirection">
+				<f:selectItem itemValue="1" itemLabel="Java" />
+				<f:selectItem itemValue="1" itemLabel="Phyton" />
+				<f:selectItem itemValue="1" itemLabel="Ruby" />
+				<f:selectItem itemValue="1" itemLabel="PHP" />
+				<f:selectItem itemValue="1" itemLabel="JSF" />
+				<f:selectItem itemValue="1" itemLabel="CSS" />			
+			</h:selectManyCheckbox>
+			
+	<br /><br /><br />
+		
+</body>
+</html>

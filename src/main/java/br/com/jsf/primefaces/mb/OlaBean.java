@@ -1,10 +1,12 @@
-			package br.com.jsf.primefaces.mb;
+package br.com.jsf.primefaces.mb;
 
 import javax.faces.bean.ManagedBean;
+import javax.faces.view.ViewScoped;
 
 //@javax.faces.bean.ManagedBean
 
 @ManagedBean (name = "ola")
+@ViewScoped
 public class OlaBean {
 	
 	private String nome;

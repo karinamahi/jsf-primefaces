@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+xmlns:f="http://xmlns.jcp.org/jsf/core"
+xmlns:h="http://xmlns.jcp.org/jsf/html">
+
+<head>
+<title>Componentes</title>
+</head>
+	
+	<b>Componente h:selectOneItemListbox</b> <br /><br />
+	
+	<h:selectOneListbox size="5" value="#{minhaCidadeBean.cidadeNatal}">
+		<f:selectItems value="#{minhaCidadeBean.todasCidades}"/>
+	</h:selectOneListbox>
+	<br /><br /><br />
+	
+	<b>Componente h:commandButton</b> <br /><br />
+	
+	<h:commandButton id="cadastrar" value="Cadastrar" action="#{cadastro.cadastrar}" />
+	<h3>#{cadastroBean.mensagem}</h3><br /><br />
+	
+	
+	<h:commandButton id="limpar" value="Limpar" type="reset" /><br /><br />
+	<h:commandButton id="voltar" value="Voltar" image="/imagens/voltar.png" action="home" /><br /><br />
+	<br /><br /><br />
+	
+<body>
+
+</body>
+</html>

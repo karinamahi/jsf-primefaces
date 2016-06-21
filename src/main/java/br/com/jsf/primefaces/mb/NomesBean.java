@@ -40,22 +40,6 @@ public class NomesBean {
 	public List<String> getNomes() {
 		return nomes;
 	}
-
-	public HtmlInputText getInputNome() {
-		return inputNome;
-	}
-
-	public void setInputNome(HtmlInputText inputNome) {
-		this.inputNome = inputNome;
-	}
-
-	public HtmlCommandButton getBotaoAdicionar() {
-		return botaoAdicionar;
-	}
-
-	public void setBotaoAdicionar(HtmlCommandButton botaoAdicionar) {
-		this.botaoAdicionar = botaoAdicionar;
-	}
 	
 	
 }

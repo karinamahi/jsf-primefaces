@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"      
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      template="/pages/templates/template-two-buttons.xhtml">
+      
+    	<ui:define name="content">
+ 
+       <h2>Registration form</h2> <br/>
+        
+        <h:form id="myForm">
+            <table>
+                <tr>
+                    <td>Username</td>
+                    <td><p:inputText value="#{userBean.user.username}" required="true" id="Username" size="10"/></td>
+                </tr>
+                <tr>
+                    <td>Password</td>
+                    <td><p:password value="#{userBean.user.password}" required="true" feedback="true" id="Password"/></td>
+                </tr>
+                <tr>
+                    <td>Confirm Password</td>
+                    <td><p:password value="#{userBean.user.passwordConfirm}" required="true" feedback="true" id="ConfirmPassword"/></td>
+                </tr>
+             </table>
+      </h:form>          
+      </ui:define>
+      <table>
+                <tr>
+                    <td colspan="2" align="center">
+                    <ui:define name="button1">
+                        <p:commandButton action="#{userBean.addUser}" value="Register"/>
+                    </ui:define>
+                    <ui:define name="button2">
+                        <p:commandButton value="Reset" update="myForm" process="@this"  >  
+                            <p:resetInput target="myForm" />  
+                        </p:commandButton>
+                    </ui:define>    
+                    </td>
+                </tr>
+            </table>
+            <ui:define name="messages">
+            <table>
+                <tr>
+                    <td><p:messages id="messages" autoUpdate="true" closable="true" /></td>
+                </tr>
+            </table>
+            </ui:define>
+        
+   
+</ui:composition>
